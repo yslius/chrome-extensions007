@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "GetAmazonHistory",
+    "version": "1.0.0",
+    "description": "description",
+    // "icons": {
+    //   "128": "icon_128.png"
+    // },
+    "permissions": ["tabs", "storage"],
+    "browser_action": {
+        "default_title": "chrome-extensions007",
+        "default_popup": "popup/popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "run_at": "document_idle",
+        "js": ["content/content.js"]
+    }]
+}
